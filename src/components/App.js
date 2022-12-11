@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Row, Col, Spinner } from 'react-bootstrap'
-import Countdown from 'react-countdown'
+
 import Web3 from 'web3'
 
 // Import Images + CSS
 import twitter from '../images/socials/twitter.svg'
 import instagram from '../images/socials/instagram.svg'
 import opensea from '../images/socials/opensea.svg'
-import showcase from '../images/showcase.png'
+
 import nft from '../images/nft.png'
 import '../App.css'
 
@@ -175,13 +175,13 @@ function App() {
 						</Col>
 						<Col className='flex social-icons'>
 							<a
-								href="https://twitter.com/DappUniversity"
+								href="https://twitter.com/street_verse"
 								target='_blank'
 								className='circle flex button'>
 								<img src={twitter} alt="Twitter" />
 							</a>
 							<a
-								href="#"
+								href="https://www.instagram.com/streetverseteam/"
 								target='_blank'
 								className='circle flex button'>
 								<img src={instagram} alt="Instagram" />
@@ -204,11 +204,18 @@ function App() {
 							/>
 						</Col>
 						<Col md={5} lg={4} xl={5} xxl={4}>
-							{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown mx-3' />}
-							<p className='text'>
-								By attending the masterclass, you'll learn how to generate NFT images, upload to IPFS, create your NFT contract, and use OpenSea!
-							</p>
-							<a href="#about" className='button mx-3'>Learn More!</a>
+							{/* {revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown mx-3' />} */}
+							<h3> Member Benefits </h3>
+							{/* {revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown' />} */}
+							<ul>
+								<li>Join us and celebrate the legacy of streetwear as it enters a
+									new era and takes its place in the metaverse.</li>
+								<li> Unrivalled Fashion Experiences</li>
+								<li>Rare Merch</li>
+								<li>Community</li>
+
+							</ul>
+							<a href="https://streetverse.club/membership" className='button mx-3'>Learn More!</a>
 						</Col>
 					</Row>
 
@@ -216,21 +223,23 @@ function App() {
 				<section id='about' className='about'>
 
 					<Row className='flex m-3'>
-						<h2 className='text-center p-3'>About the Collection</h2>
+						<h2 className='text-center p-3'>StreetVerse Membership </h2>
 						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
-							<img src={nft} alt="Multiple Crypto Punks" className='showcase' />
+							<img src={nft} alt="streetverse" className='showcase' />
 						</Col>
 						<Col md={5} lg={4} xl={5} xxl={4}>
 							{isError ? (
 								<p>{message}</p>
 							) : (
 								<div>
-									<h3>Mint your NFT in</h3>
-									{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown' />}
+									<h3>Mint your StreetVerse Membership NFT </h3>
+									{/* {revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown' />} */}
 									<ul>
-										<li>1,000 generated punked out images using an art generator</li>
-										<li>Free minting on Goerli testnet</li>
-										<li>Viewable on Opensea shortly after minting</li>
+										<li>Buy Ethereum (ETH)</li>
+										<li>Create a Crypto Wallet</li>
+										<li>Mint Membership NFT</li>
+											<li>Connect Wallet to Opensea</li>
+											
 									</ul>
 
 									{isMinting ? (

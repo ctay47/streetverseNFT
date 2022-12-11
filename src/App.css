@@ -1,18 +1,19 @@
 /* Styles go here */
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Rubik:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Play:wght@700&display=swap');
 
 :root {
     --clr-primary: #030303;
     --clr-secondary: #1E1E1E;
     --clr-text-light: #F2ECFF;
     --clr-text-dark: #030303;
-    --clr-button-bg-1: #3586C6;
-    --clr-button-bg-2: #44E6FF;
-    --clr-button-bg-3: #FF7F50;
+    --clr-button-bg-1: #FF0000;
+    --clr-button-bg-2: #FFD700;
+    --clr-button-bg-3: #FF0000;
 }
 
 html {
-    font-family: "Rubik" !important;
+    font-family: "Play" !important;
     font-weight: 400;
 }
 
@@ -25,7 +26,7 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 
-    font-family: "Rubik";
+    font-family: "Play";
 }
 
 .flex {
@@ -60,7 +61,7 @@ main {
 
 /* TEXT STYLES */
 h1 {
-    font-family: "Gochi Hand";
+    font-family: "Play";
     font-weight: 700;
     font-size: clamp(3rem, 10vw, 10rem);
     transform: rotate(-4deg);
@@ -68,7 +69,7 @@ h1 {
 }
 
 h2 {
-    font-family: "Gochi Hand";
+    font-family: "Play";
     font-weight: 700;
     font-size: clamp(2rem, 5vw, 5rem);
     padding-left: .8em;
@@ -79,7 +80,7 @@ h3 {
 }
 
 .sub-header {
-    font-family: "Gochi Hand";
+    font-family: "Play";
     font-weight: 700;
     font-size: clamp(2rem, 5vw, 4rem);
     transform: rotate(-4deg) translateX(2.5em) translateY(-0.5em);
@@ -87,14 +88,14 @@ h3 {
 }
 
 .countdown {
-    font-family: "Rubik";
+    font-family: "Play";
     font-weight: 700;
     font-size: clamp(3rem, 5vw, 4rem);
 }
 
 .text, ul {
     font-size: clamp(1rem, 2vw, 1.15rem);
-    font-weight: 300;
+    font-weight: 200;
     padding: 1.15em;
 }
 
