@@ -49,7 +49,7 @@ function App() {
 
 			const maxSupply = await openPunks.methods.maxSupply().call()
 			const totalSupply = await openPunks.methods.totalSupply().call()
-			setSupplyAvailable(maxSupply - totalSupply)
+			// setSupplyAvailable(maxSupply - totalSupply)
 
 			const allowMintingAfter = await openPunks.methods.allowMintingAfter().call()
 			const timeDeployed = await openPunks.methods.timeDeployed().call()
@@ -82,7 +82,7 @@ function App() {
 			}
 
 			const networkId = await web3.eth.net.getId()
-			setNetworkId(networkId)
+			// setNetworkId(networkId)
 
 			if (networkId !== 5777) {
 				setExplorerURL(config.NETWORKS[networkId].explorerURL)
@@ -133,7 +133,7 @@ function App() {
 				.on('confirmation', async () => {
 					const maxSupply = await openPunks.methods.maxSupply().call()
 					const totalSupply = await openPunks.methods.totalSupply().call()
-					setSupplyAvailable(maxSupply - totalSupply)
+					// setSupplyAvailable(maxSupply - totalSupply)
 
 					const ownerOf = await openPunks.methods.walletOfOwner(account).call()
 					setOwnerOf(ownerOf)
@@ -150,7 +150,7 @@ function App() {
 	const cycleImages = async () => {
 		const getRandomNumber = () => {
 			const counter = (Math.floor(Math.random() * 1000)) + 1
-			setCounter(counter)
+			// setCounter(counter)
 		}
 
 		if (!isCycling) { setInterval(getRandomNumber, 3000) }
