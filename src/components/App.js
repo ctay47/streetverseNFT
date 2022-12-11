@@ -22,10 +22,10 @@ function App() {
 	const [web3, setWeb3] = useState(null)
 	const [openPunks, setOpenPunks] = useState(null)
 
-	const [supplyAvailable, setSupplyAvailable] = useState(0)
+	// const [supplyAvailable, setSupplyAvailable] = useState(0)
 
 	const [account, setAccount] = useState(null)
-	const [networkId, setNetworkId] = useState(null)
+	// const [networkId, setNetworkId] = useState(null)
 	const [ownerOf, setOwnerOf] = useState([])
 
 	const [explorerURL, setExplorerURL] = useState('https://etherscan.io')
@@ -35,10 +35,10 @@ function App() {
 	const [isError, setIsError] = useState(false)
 	const [message, setMessage] = useState(null)
 
-	const [currentTime, setCurrentTime] = useState(new Date().getTime())
+	// const [currentTime, setCurrentTime] = useState(new Date().getTime())
 	const [revealTime, setRevealTime] = useState(0)
 
-	const [counter, setCounter] = useState(7)
+	// const [counter, setCounter] = useState(7)
 	const [isCycling, setIsCycling] = useState(false)
 
 	const loadBlockchainData = async (_web3, _account, _networkId) => {
@@ -160,7 +160,7 @@ function App() {
 	useEffect(() => {
 		loadWeb3()
 		cycleImages()
-	}, [account]);
+	}, [account,loadWeb3,cycleImages]);
 
 	return (
 		<div>
