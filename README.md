@@ -1,4 +1,4 @@
-# Open Punks
+# StreetVerse
 
 ## Technology Stack & Tools
 
