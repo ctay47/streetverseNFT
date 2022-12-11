@@ -22,10 +22,10 @@ function App() {
 	const [web3, setWeb3] = useState(null)
 	const [openPunks, setOpenPunks] = useState(null)
 
-	// const [supplyAvailable, setSupplyAvailable] = useState(0)
+	const [supplyAvailable, setSupplyAvailable] = useState(0)
 
 	const [account, setAccount] = useState(null)
-	// const [networkId, setNetworkId] = useState(null)
+	const [networkId, setNetworkId] = useState(null)
 	const [ownerOf, setOwnerOf] = useState([])
 
 	const [explorerURL, setExplorerURL] = useState('https://etherscan.io')
@@ -35,10 +35,10 @@ function App() {
 	const [isError, setIsError] = useState(false)
 	const [message, setMessage] = useState(null)
 
-	// const [currentTime, setCurrentTime] = useState(new Date().getTime())
+	const [currentTime, setCurrentTime] = useState(new Date().getTime())
 	const [revealTime, setRevealTime] = useState(0)
 
-	// const [counter, setCounter] = useState(7)
+	const [counter, setCounter] = useState(7)
 	const [isCycling, setIsCycling] = useState(false)
 
 	const loadBlockchainData = async (_web3, _account, _networkId) => {
@@ -49,7 +49,7 @@ function App() {
 
 			const maxSupply = await openPunks.methods.maxSupply().call()
 			const totalSupply = await openPunks.methods.totalSupply().call()
-			// setSupplyAvailable(maxSupply - totalSupply)
+			setSupplyAvailable(maxSupply - totalSupply)
 
 			const allowMintingAfter = await openPunks.methods.allowMintingAfter().call()
 			const timeDeployed = await openPunks.methods.timeDeployed().call()
@@ -82,7 +82,7 @@ function App() {
 			}
 
 			const networkId = await web3.eth.net.getId()
-			// setNetworkId(networkId)
+			setNetworkId(networkId)
 
 			if (networkId !== 5777) {
 				setExplorerURL(config.NETWORKS[networkId].explorerURL)
@@ -133,7 +133,7 @@ function App() {
 				.on('confirmation', async () => {
 					const maxSupply = await openPunks.methods.maxSupply().call()
 					const totalSupply = await openPunks.methods.totalSupply().call()
-					// setSupplyAvailable(maxSupply - totalSupply)
+					setSupplyAvailable(maxSupply - totalSupply)
 
 					const ownerOf = await openPunks.methods.walletOfOwner(account).call()
 					setOwnerOf(ownerOf)
@@ -150,7 +150,7 @@ function App() {
 	const cycleImages = async () => {
 		const getRandomNumber = () => {
 			const counter = (Math.floor(Math.random() * 1000)) + 1
-			// setCounter(counter)
+			setCounter(counter)
 		}
 
 		if (!isCycling) { setInterval(getRandomNumber, 3000) }
@@ -160,7 +160,7 @@ function App() {
 	useEffect(() => {
 		loadWeb3()
 		cycleImages()
-	}, [account,loadWeb3,cycleImages]);
+	}, [account]);
 
 	return (
 		<div>
@@ -212,7 +212,7 @@ function App() {
 									new era and takes its place in the metaverse.</li>
 								<li> Unrivalled Fashion Experiences</li>
 								<li>Rare Merch</li>
-								<li>Community</li>
+								<li>Connect Wallet to Opensea</li>
 
 							</ul>
 							<a href="https://streetverse.club/membership" className='button mx-3'>Learn More!</a>
@@ -238,7 +238,8 @@ function App() {
 										<li>Buy Ethereum (ETH)</li>
 										<li>Create a Crypto Wallet</li>
 										<li>Mint Membership NFT</li>
-											<li>Connect Wallet to Opensea</li>
+									
+		
 											
 									</ul>
 
@@ -256,7 +257,9 @@ function App() {
 												style={{ display: 'inline-block', marginLeft: '3px' }}>
 												OpenSea
 											</a>
-										</small></p>}
+											</small></p>}
+										
+										<a href="https://streetverse.club/auth/login" className='button mt-3'>Sign Into StreetVerse!</a>
 								</div>
 							)}
 						</Col>
