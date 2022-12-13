@@ -10,7 +10,7 @@
 - [Infura.io](https://infura.io/) (For copying the Ethereum mainnet)
 - [MetaMask](https://metamask.io/) (Ethereum Wallet)
 - [Git](https://git-scm.com/)/[GitHub](https://github.com) (Commit our code)
-- [Fleek](https://fleek.co/) (Website Deployment)
+- [Netlify](https://fleek.co/) (Website Deployment)
 
 ## Requirements For Initial Setup
 - Install [NodeJS](https://nodejs.org/en/), Recommended version is 14.16.0
