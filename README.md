@@ -116,7 +116,7 @@ Otherwise run this command instead:
 Finally, push the code to the repoository:
 `$ git push origin master`
 
-### 5. Create or sign in to your Fleek account
+### 5. Create or sign in to your Netlify account
 Easiest option is to sign in with your GitHub account.
 
 Click on Add new site & Connect with GitHub
